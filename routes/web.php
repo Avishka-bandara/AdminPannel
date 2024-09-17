@@ -30,5 +30,6 @@ Route::middleware(['auth','userMiddleware'])->group(function(){
 Route::middleware(['auth','adminMiddleware'])->group(function(){
 
     Route::get('/admin/dashboard',[AdminController::class,'index'])->name('admin.dashboard');
+    Route::get('/admin/Product',[AdminController::class,'index'])->name('admin.product');
 
 });
